@@ -12,3 +12,14 @@ isIsogram "aba" = false
 */
 
 // solution
+function isIsogram(str) {
+    let arr = str.toUpperCase().split("").sort()
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i + 1]) {
+            return false
+        }
+    }
+    return true
+}
+console.log(isIsogram("strr"))
